@@ -1,0 +1,15 @@
+{
+  "name": "1--starting-with-express",
+  "version": "1.0.0",
+  "description": "Starting expressJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "ritik gangwar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

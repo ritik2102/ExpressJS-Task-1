@@ -8,20 +8,16 @@ const rootDir=require('../util/path');
 // importing the router(creating the router object)
 const router=express.Router();
 
+const contactController=require('../controllers/contact');
+
 // registering the router with methods
 // admin/add-product
-router.get('/contact',(req,res,next)=>{
-    // sending the response(send allows to send a response)
-    // res.send('<h1>Hello from express</h1>');
-    res.sendFile(path.join(rootDir,'views','contact.html'));
-});
+router.get('/contact',contactController.getContact);
 
 // post filters our post requests
 // get filters the get requests
 // admin/add-product
-router.post("/contact",(req,res,next)=>{
-    res.sendFile(path.join(rootDir,'views','success.html'));
-});
+router.post("/contact",contactController.success);
 
 
 module.exports=router;

@@ -1,11 +1,15 @@
+const path=require("path");
+
 const express=require("express");
+
+const rootDir=require('../util/path.js');
 
 const router=express.Router();
 
 router.get('/',(req,res,next)=>{
     // sending the response(send allows to send a response)
-    // res.send('<h1>Hello from express</h1>');
-    res.send('<h1>Hello from Express!</h1>');
+    // dirname golds the absolute path to the current folder
+    res.sendFile(path.join(rootDir,'views','shop.html'));
 });
 
 module.exports=router;
